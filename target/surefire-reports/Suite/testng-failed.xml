@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="com.gudexams.listeners.ListenersClass"/>
+    <listener class-name="com.gudexams.listeners.MethodInterceptor"/>
+    <listener class-name="com.gudexams.listeners.AnnotationTransformer"/>
+  </listeners>
+  <test thread-count="5" parallel="methods" name="Test(failed)" verbose="0">
+    <classes>
+      <class name="com.gudexams.admin.AdminLogin">
+        <methods>
+          <include name="adminLoginPage"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.gudexams.admin.AdminLogin -->
+      <class name="com.gudexams.student.StudentLogin">
+        <methods>
+          <include name="StudentLogin1"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.gudexams.student.StudentLogin -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

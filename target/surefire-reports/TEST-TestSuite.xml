@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="199.121" tests="2" errors="0" skipped="0" failures="2">
+  <properties>
+    <property name="java.specification.version" value="16"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\suraj\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_1.18.0.20210603-1206\jars\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="java.vm.specification.version" value="16"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Users\suraj\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205\jre\bin"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B test"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="maven.home" value="D:\suraj\GPK_GudExams\EMBEDDED"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\suraj"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2021-04-20"/>
+    <property name="java.home" value="C:\Users\suraj\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205\jre"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="16.0.1+9-24"/>
+    <property name="user.name" value="suraj"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\suraj\AppData\Local\Temp\"/>
+    <property name="java.version" value="16.0.1"/>
+    <property name="user.dir" value="D:\suraj\GPK_GudExams"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\suraj\GPK_GudExams"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Users\suraj\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Users/suraj/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205/jre/bin/server;C:/Users/suraj/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205/jre/bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\suraj\apache-maven-3.8.1\bin;D:\suraj\appium\cmdline-tools\tools\bin;D:\suraj\appium\cmdline-tools\tools\bin\sdkmanager\platform-tools;C:\Program Files\Amazon\AWSCLI\bin\;C:\Program Files\Amazon\AWSCLI\bin;D:\suraj\Git\cmd;C:\Users\suraj\AppData\Local\Android\Sdk\tools\bin;C:\Users\suraj\AppData\Local\Android\Sdk\tools;C:\Users\suraj\AppData\Local\Android\Sdk;C:\Users\suraj\AppData\Local\Android\Sdk\platform-tools;C:\Users\suraj\AppData\Local\Android\Sdk\tools\bin;C:\Users\suraj\AppData\Local\Android\Sdk\tools\lib\x86_64;C:\Users\suraj\AppData\Local\Android\Sdk\tools\lib\x86;C:\Program Files\Java\jdk-11.0.14\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;D:\suraj\allure\allure-2.13.3\bin;C:\Users\suraj\AppData\Local\Microsoft\WindowsApps;C:\Windows\system32;;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="16.0.1+9-24"/>
+    <property name="classworlds.conf" value="D:\suraj\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf6461010013608717878.tmp"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="60.0"/>
+  </properties>
+  <testcase name="setUp" classname="com.gudexams.student.StudentLogin" time="189.41">
+    <failure message="Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.&#10;Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;&#10;System info: host: &apos;DESKTOP-62ENQ34&apos;, ip: &apos;172.19.48.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;&#10;Driver info: org.openqa.selenium.remote.RemoteWebDriver&#10;Command: [null, newSession {capabilities=[Capabilities {browserName: chrome}], desiredCapabilities=Capabilities {browserName: chrome}}]&#10;Capabilities {}" type="org.openqa.selenium.SessionNotCreatedException">org.openqa.selenium.SessionNotCreatedException: 
+Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'DESKTOP-62ENQ34', ip: '172.19.48.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome}], desiredCapabilities=Capabilities {browserName: chrome}}]
+Capabilities {}
+Caused by: java.lang.RuntimeException: NettyHttpHandler request execution error
+Caused by: java.util.concurrent.ExecutionException: java.util.concurrent.TimeoutException: Request timeout to localhost/127.0.0.1:4446 after 180000 ms
+Caused by: java.util.concurrent.TimeoutException: Request timeout to localhost/127.0.0.1:4446 after 180000 ms
+</failure>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Mar 17, 2022 4:37:30 PM org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer createTracer
+INFO: Using OpenTelemetry for tracing
+]]></system-err>
+  </testcase>
+  <testcase name="setUp" classname="com.gudexams.admin.AdminLogin" time="189.411">
+    <failure message="Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.&#10;Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;&#10;System info: host: &apos;DESKTOP-62ENQ34&apos;, ip: &apos;172.19.48.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;&#10;Driver info: org.openqa.selenium.remote.RemoteWebDriver&#10;Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge}], desiredCapabilities=Capabilities {browserName: MicrosoftEdge}}]&#10;Capabilities {}" type="org.openqa.selenium.SessionNotCreatedException">org.openqa.selenium.SessionNotCreatedException: 
+Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'DESKTOP-62ENQ34', ip: '172.19.48.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge}], desiredCapabilities=Capabilities {browserName: MicrosoftEdge}}]
+Capabilities {}
+Caused by: java.lang.RuntimeException: NettyHttpHandler request execution error
+Caused by: java.util.concurrent.ExecutionException: java.util.concurrent.TimeoutException: Request timeout to localhost/127.0.0.1:4445 after 180000 ms
+Caused by: java.util.concurrent.TimeoutException: Request timeout to localhost/127.0.0.1:4445 after 180000 ms
+</failure>
+  </testcase>
+</testsuite>
