@@ -7,10 +7,10 @@ import org.testng.annotations.BeforeMethod;
 
 import com.gudexams.driver.Driver;
 
-public class BaseTest_Admin
+public class BaseTest
 {
 
-	protected BaseTest_Admin() {}
+	protected BaseTest() {}
 
 	@BeforeMethod
 	protected void setUp(Object[] data)

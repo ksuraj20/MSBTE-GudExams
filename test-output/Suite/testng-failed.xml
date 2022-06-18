@@ -10,7 +10,7 @@
     <classes>
       <class name="com.gudexams.admin.AdminLogin">
         <methods>
-          <include name="adminLoginPage"/>
+          <include name="adminLoginPage" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>

@@ -6,10 +6,10 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 import com.gudexams.adminpages.AdminLogin_po;
+import com.gudexams.adminpages.ExamConfigurations_po;
 import com.gudexams.annotations.FrameworkAnnotations;
 import com.gudexams.enums.CategoryType;
 import com.gudexams.exceptions.FrameworkExceptions;
-import com.gudexams.student.BaseTest;
 
 
 
@@ -36,6 +36,12 @@ public final class AdminLogin extends BaseTest
 				{
 					throw new FrameworkExceptions("Failed to input the required values");
 				}
+			
+			ExamConfigurations_po ec = new ExamConfigurations_po();
+			
+			ec.clickLinks("Exam Configurations");
+			ec.clickLinks("Add Institutes");
+			
 			
 		}
 

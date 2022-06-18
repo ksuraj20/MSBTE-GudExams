@@ -1,6 +1,7 @@
 package com.gudexams.adminpages;
 
 import org.openqa.selenium.By;
+
 import com.gudexams.driver.DriverManager;
 import com.gudexams.enums.WaitStrategy;
 import com.gudexams.factories.ExplicitWaitFactory;
@@ -15,6 +16,13 @@ public class BasePage
 			ExtentLogger.pass(elementName+" is clicked", true);
 		}
 
+	protected void click(String by, WaitStrategy waitstrategy, String elementName, String newValue)
+		{
+			By temp = By.xpath(by.replace("%value%", newValue));
+			ExplicitWaitFactory.performExplicitWait(waitstrategy, temp).click();
+			ExtentLogger.pass(elementName+" is clicked", true);
+		}
+	
 	protected void sendKeys(By by, String value, WaitStrategy waitstrategy, String elementName)
 		{
 			ExplicitWaitFactory.performExplicitWait(waitstrategy, by).sendKeys(value);
