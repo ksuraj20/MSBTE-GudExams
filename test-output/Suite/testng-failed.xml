@@ -11,8 +11,8 @@
       <class name="com.gudexams.admin.AdminLogin">
         <methods>
           <include name="adminLoginPage" invocation-numbers="0"/>
-          <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- com.gudexams.admin.AdminLogin -->
     </classes>

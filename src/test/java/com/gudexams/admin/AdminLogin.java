@@ -18,7 +18,7 @@ public final class AdminLogin extends BaseTest
 	@FrameworkAnnotations(category = { CategoryType.SMOKE })
 	
 	@Test
-	public void adminLoginPage(Map<String, String> data)
+	public static void adminLoginPage(Map<String, String> data)
 		{
 
 			AdminLogin_po alp = new AdminLogin_po();
@@ -42,7 +42,7 @@ public final class AdminLogin extends BaseTest
 			ec.clickLinks("Exam Configurations");
 			ec.clickLinks("Add Institutes");
 			
-			
+			AddInstitute.addInstitute(data);
 		}
 
 }

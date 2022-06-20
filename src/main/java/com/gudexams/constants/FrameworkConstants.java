@@ -20,11 +20,13 @@ public final class FrameworkConstants
 	private static final String CONFIGFILEPATH =".\\src\\test\\resources\\config\\config.properties";
 	private static final String EXTENTREPORTFOLDERPATH ="extent-test-output/";
 	private static  String extentReportFilePath = "";
-	private static int EXPLICITWAIT =15;
+	private static final int EXPLICITWAIT =15;
 	private static final String EXCELPATH=".\\src\\test\\resources\\excel\\testData.xlsx";
 	private static final String TESTSHEETNAME = "testCaseData";
 	private static final String USERSDATASHEET = "usersDate";
+	private static final String INSTDATASHEET = "InstData";
 	private static final File IMAGESTOREPATH=new File(".\\src\\test\\resources\\image-test-output\\ss.png");
+
 
 	public static String getChromedriverpath()
 		{
@@ -97,6 +99,11 @@ public final class FrameworkConstants
 	public static String getUsersDataSheetName()
 		{
 			return USERSDATASHEET;
+		}
+
+	public static String getInstituteDataSheet()
+		{
+			return INSTDATASHEET;
 		}
 
 	public static BufferedImage bufferImagePath()

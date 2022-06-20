@@ -21,6 +21,10 @@ public final class DataProviderUtils
 				{
 					list = ExcelUtils.getTestDetails(FrameworkConstants.getUsersDataSheetName());
 				}
+			else
+				{
+					list = ExcelUtils.getTestDetails(FrameworkConstants.getInstituteDataSheet());
+				}
 
 			List<Map<String, String>> iteratioList = new ArrayList<Map<String,String>>();
 

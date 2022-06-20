@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Jun 18 17:18:33 IST 2022</td>
+<td>Started on:</td><td>Mon Jun 20 17:43:58 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>10 seconds (10112 ms)</td>
+<tr><td>Total time:</td><td>11 seconds (11436 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
@@ -76,8 +76,42 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.gudexams.admin.AdminLogin.adminLoginPage()'><b>adminLoginPage</b><br>Test class: com.gudexams.admin.AdminLogin<br>Test method: To test the login logout funcationality of the Institute-Admin role using given login cedentials<br>Parameters: {password=12345678, role=admin, browser=chrome, selectRole=Other, execute=yes, testName=adminLoginPage, username=super}</td>
-<td></td>
-<td>3</td>
+<td><div><pre>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:92)
+	at com.gudexams.adminpages.BasePage.sendKeys(BasePage.java:28)
+	at com.gudexams.adminpages.AddInstitute_po.enterUsername(AddInstitute_po.java:35)
+	at com.gudexams.admin.AddInstitute.addInstitute(AddInstitute.java:34)
+	at com.gudexams.admin.AdminLogin.adminLoginPage(AdminLogin.java:45)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 9 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace944213643", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace944213643'><pre>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:92)
+	at com.gudexams.adminpages.BasePage.sendKeys(BasePage.java:28)
+	at com.gudexams.adminpages.AddInstitute_po.enterUsername(AddInstitute_po.java:35)
+	at com.gudexams.admin.AddInstitute.addInstitute(AddInstitute.java:34)
+	at com.gudexams.admin.AdminLogin.adminLoginPage(AdminLogin.java:45)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:77)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:15)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+</pre></div></td>
+<td>4</td>
 <td>com.gudexams.admin.AdminLogin@54eb2b70</td></tr>
 </table><p>
 </body>
