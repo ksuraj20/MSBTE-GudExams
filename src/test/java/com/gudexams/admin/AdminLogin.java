@@ -15,12 +15,14 @@ import com.gudexams.exceptions.FrameworkExceptions;
 
 public final class AdminLogin extends BaseTest
 {
+	static String sheetName = "Inst_data";
+	
 	@FrameworkAnnotations(category = { CategoryType.SMOKE })
 	
 	@Test
-	public static void adminLoginPage(Map<String, String> data)
+	public static void adminLoginPage(Map<String, String> data )
 		{
-
+			data.getOrDefault(data.get("sheetName"), sheetName);
 			AdminLogin_po alp = new AdminLogin_po();
 
 			Select rs = new Select(alp.selectRole());
