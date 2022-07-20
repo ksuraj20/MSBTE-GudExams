@@ -44,6 +44,7 @@ public final class DriverFactory
 			if(browser.equalsIgnoreCase("chrome"))
 				{
 					ChromeOptions cp= new ChromeOptions();
+					//cp.setExperimentalOption("useAutomation", false);
 					cp.addArguments("use-fake-ui-for-media-stream");
 					cp.addArguments("--incognito");
 					cp.addArguments("--disable-notifications");

@@ -7,6 +7,7 @@ import com.gudexams.enums.ConfigProperties;
 import com.gudexams.exceptions.BrowesrInvocationFailedException;
 import com.gudexams.factories.DriverFactory;
 import com.gudexams.utils.PropertyUtils;
+import com.gudexams.videorecord.RecorderConfig;
 
 public class Driver
 {
@@ -16,12 +17,12 @@ public class Driver
 	//Driver initialization
 	public static void initDriver(String browser, String role)
 		{
-
 			if(Objects.isNull(DriverManager.getDriver()))
 				{
 					try
 						{
 							DriverManager.setDriver(DriverFactory.getDriver(browser));
+							RecorderConfig.startRecord();
 						} 
 					catch (MalformedURLException e)
 						{
@@ -48,6 +49,7 @@ public class Driver
 		{
 			if(Objects.nonNull(DriverManager.getDriver()))
 				{
+					RecorderConfig.stopRecorder();
 					DriverManager.getDriver().quit();
 					DriverManager.unload();
 				}

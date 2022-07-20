@@ -2,23 +2,23 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-20T17:37:49 IST" name="Suite" finished-at="2022-07-20T17:38:00 IST" duration-ms="10871">
+  <suite started-at="2022-07-20T19:02:01 IST" name="Suite" finished-at="2022-07-20T19:02:17 IST" duration-ms="16249">
     <groups>
     </groups>
-    <test started-at="2022-07-20T17:37:49 IST" name="Test" finished-at="2022-07-20T17:38:00 IST" duration-ms="10871">
+    <test started-at="2022-07-20T19:02:01 IST" name="Test" finished-at="2022-07-20T19:02:17 IST" duration-ms="16249">
       <class name="com.gudexams.admin.AdminLogin">
-        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.gudexams.admin.AdminLogin@69f1a286]" started-at="2022-07-20T17:37:50 IST" name="setUp" finished-at="2022-07-20T17:37:53 IST" duration-ms="2591" status="PASS">
+        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.gudexams.admin.AdminLogin@69f1a286]" started-at="2022-07-20T19:02:02 IST" name="setUp" finished-at="2022-07-20T19:02:05 IST" duration-ms="3825" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.Object;@4eb1c69]]>
+                <![CDATA[[Ljava.lang.Object;@3bd3d05e]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="adminLoginPage(java.util.Map)[pri:0, instance:com.gudexams.admin.AdminLogin@69f1a286]" started-at="2022-07-20T17:37:53 IST" name="adminLoginPage" description="To test the login logout funcationality of the Institute-Admin role using given login cedentials" data-provider="userDate" finished-at="2022-07-20T17:38:00 IST" duration-ms="7408" status="FAIL">
+        <test-method signature="adminLoginPage(java.util.Map)[pri:0, instance:com.gudexams.admin.AdminLogin@69f1a286]" started-at="2022-07-20T19:02:06 IST" name="adminLoginPage" description="To test the login logout funcationality of the Institute-Admin role using given login cedentials" data-provider="userDate" finished-at="2022-07-20T19:02:14 IST" duration-ms="8840" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -58,7 +58,7 @@ at java.base/java.lang.Thread.run(Thread.java:833)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- adminLoginPage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.gudexams.admin.AdminLogin@69f1a286]" started-at="2022-07-20T17:38:00 IST" name="tearDown" finished-at="2022-07-20T17:38:00 IST" duration-ms="106" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.gudexams.admin.AdminLogin@69f1a286]" started-at="2022-07-20T19:02:15 IST" name="tearDown" finished-at="2022-07-20T19:02:17 IST" duration-ms="2651" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
