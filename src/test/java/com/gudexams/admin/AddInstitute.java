@@ -10,7 +10,9 @@ import org.testng.annotations.Test;
 
 import com.gudexams.adminpages.AddInstitute_po;
 import com.gudexams.annotations.FrameworkAnnotations;
+import com.gudexams.constants.FrameworkConstants;
 import com.gudexams.enums.CategoryType;
+import com.gudexams.utils.DataProviderUtils;
 
 /**
  * @author suraj
@@ -23,7 +25,7 @@ public class AddInstitute extends BaseTest
 		@Test
 		public static void addInstitute(Map<String, String> data)
 		{
-			data.put(null, null);
+			DataProviderUtils.setSheetName(FrameworkConstants.getInstituteDataSheet());
 			
 			AddInstitute_po ai = new AddInstitute_po();
 			Select ut = new Select(ai.userType());

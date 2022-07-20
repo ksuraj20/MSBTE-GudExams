@@ -1,6 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.gudexams.msbte</groupId>
 	<artifactId>MSBTE_GudExams</artifactId>
@@ -108,6 +106,28 @@
 			<version>4.5.13</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.gudexams</groupId>
+			<artifactId>ATUTestRecorder</artifactId>
+			<version>5.1.1</version>
+			<scope>system</scope>
+			<systemPath>${basedir}\src\test\resources\externalJars\ATUReporter_Selenium_testNG_5.1.1.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gudexams</groupId>
+			<artifactId>ATUReporter_Selenium_testNG</artifactId>
+			<version>2.1</version>
+			<scope>system</scope>
+			<systemPath>${basedir}\src\test\resources\externalJars\ATUTestRecorder_2.1.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.stephenc.monte</groupId>
+			<artifactId>monte-screen-recorder</artifactId>
+			<version>0.7.7.0</version>
+		</dependency>
+
 
 	</dependencies>
 
@@ -117,4 +137,3 @@
 	</properties>
 
 </project>
-

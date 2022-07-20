@@ -2,6 +2,7 @@ package com.gudexams.admin;
 
 import java.util.Map;
 
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
@@ -15,16 +16,16 @@ import com.gudexams.exceptions.FrameworkExceptions;
 
 public final class AdminLogin extends BaseTest
 {
-	static String sheetName = "Inst_data";
 	
 	@FrameworkAnnotations(category = { CategoryType.SMOKE })
 	
 	@Test
-	public static void adminLoginPage(Map<String, String> data )
+	public static void adminLoginPage(Map<String, String> data) throws InterruptedException
 		{
-			data.getOrDefault(data.get("sheetName"), sheetName);
 			AdminLogin_po alp = new AdminLogin_po();
-
+			
+			Thread.sleep(5000);
+			
 			Select rs = new Select(alp.selectRole());
 
 			rs.selectByVisibleText(data.get("selectRole"));	

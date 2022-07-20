@@ -11,7 +11,9 @@ import com.gudexams.constants.FrameworkConstants;
 
 public final class DataProviderUtils
 {
+
 	private static List<Map<String, String>> list = new ArrayList<Map<String,String>>();
+	private static String sheetName;
 
 	@DataProvider(parallel = true)
 	public static Object[] userDate(Method m)
@@ -21,9 +23,10 @@ public final class DataProviderUtils
 				{
 					list = ExcelUtils.getTestDetails(FrameworkConstants.getUsersDataSheetName());
 				}
-			else
+			else if(!sheetName.isEmpty())
 				{
-					list = ExcelUtils.getTestDetails(FrameworkConstants.getInstituteDataSheet());
+					System.out.print(getSheetName());
+					list = ExcelUtils.getTestDetails(getSheetName());
 				}
 
 			List<Map<String, String>> iteratioList = new ArrayList<Map<String,String>>();
@@ -38,4 +41,15 @@ public final class DataProviderUtils
 
 			return iteratioList.toArray();
 		}
+
+	public static String getSheetName()
+		{
+			return sheetName;
+		}
+
+	public static void setSheetName(String sheetName)
+		{
+			DataProviderUtils.sheetName = sheetName;
+		}
+
 }

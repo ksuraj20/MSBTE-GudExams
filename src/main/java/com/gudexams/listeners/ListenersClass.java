@@ -10,6 +10,7 @@ import org.testng.ITestResult;
 import com.gudexams.annotations.FrameworkAnnotations;
 import com.gudexams.reports.ExtentLogger;
 import com.gudexams.reports.ExtentReport;
+import com.gudexams.videorecord.RecorderConfig;
 
 public class ListenersClass implements ITestListener, ISuiteListener
 {
@@ -18,11 +19,13 @@ public class ListenersClass implements ITestListener, ISuiteListener
 	public void onStart(ISuite suite)
 		{
 			ExtentReport.initReports();
+			RecorderConfig.startRecord();
 		}
 
 	public void onFinish(ISuite suite)
 		{
 			ExtentReport.flusReports();
+			RecorderConfig.stopRecorder();
 		}
 
 	public void onTestStart(ITestResult result)
