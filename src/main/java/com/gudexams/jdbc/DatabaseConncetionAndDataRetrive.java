@@ -8,6 +8,10 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import com.gudexams.enums.ConfigProperties;
 import com.gudexams.exceptions.DatabaseConnectivityDataFetchException;
@@ -20,12 +24,11 @@ import com.gudexams.utils.PropertyUtils;
 public class DatabaseConncetionAndDataRetrive
 {
 	private static Connection connection;
-	// private static ArrayList<Byte[]> arrayList = new ArrayList<>();
+	private static List<Map<String, String>> list = null;
 
 	public static void main(String[] args)
 		{
-			getDbData("SELECT * FROM `users`");
-
+			dbDataProvider("SELECT * FROM users", "username");
 		}
 
 	private static Connection establishDatabaseConnection()
@@ -48,7 +51,7 @@ public class DatabaseConncetionAndDataRetrive
 				}
 		}
 
-	public static void getDbData(String executableQuery)
+	private static void getDbData(String executableQuery)
 		{
 			connection = establishDatabaseConnection();
 
@@ -56,16 +59,28 @@ public class DatabaseConncetionAndDataRetrive
 				{
 					Statement statement = connection.createStatement();
 					ResultSet result = statement.executeQuery(executableQuery);
-					// result.next();
+					//result.next();
+
+					Map<String,String> map =null;
+					list = new ArrayList<Map<String, String>>();
 
 					int columnCount = result.getMetaData().getColumnCount();
 					if (columnCount == 0)
 						throw new DatabaseConnectivityDataFetchException(
-								"Failed to establish the data from givin table ");
+								"Failed to retrive the data from givin table ");
 
-					while (result.next())
+					while(result.next())
 						{
-							System.out.println(result.getString("username"));
+							map = new HashMap<String, String>(); 
+
+							for(int j=1; j<=columnCount; j++)
+								{
+									String key = result.getMetaData().getColumnName(j);
+									String value = result.getString(j);
+									//System.out.println(key+"     "+value);
+									map.put(key, value);
+								}
+							list.add(map);
 						}
 
 				} catch (SQLException e)
@@ -73,7 +88,16 @@ public class DatabaseConncetionAndDataRetrive
 					throw new DatabaseConnectivityDataFetchException(
 							"Failed to establish the connection with Database ", e);
 				}
+		}
 
+	public static void dbDataProvider(String sqlQuery, String dataParameter) 
+		{
+			getDbData(sqlQuery);
+
+			for (Map<String, String> l2 : list)
+				{
+					System.out.println(l2.get(dataParameter));
+				}
 		}
 
 }

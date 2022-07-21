@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.gudexams.admin.AdminLogin">
+      <class name="com.gudexams.jdbc.DatabaseConncetionAndDataRetrive">
         <methods>
-          <include name="adminLoginPage"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
+          <include name="dbDataProvider"/>
         </methods>
-      </class> <!-- com.gudexams.admin.AdminLogin -->
+      </class> <!-- com.gudexams.jdbc.DatabaseConncetionAndDataRetrive -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
