@@ -1,0 +1,79 @@
+/**
+ * 
+ */
+package com.gudexams.jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.gudexams.enums.ConfigProperties;
+import com.gudexams.exceptions.DatabaseConnectivityDataFetchException;
+import com.gudexams.utils.PropertyUtils;
+
+/**
+ * @author Suraj
+ *
+ */
+public class DatabaseConncetionAndDataRetrive
+{
+	private static Connection connection;
+	// private static ArrayList<Byte[]> arrayList = new ArrayList<>();
+
+	public static void main(String[] args)
+		{
+			getDbData("SELECT * FROM `users`");
+
+		}
+
+	private static Connection establishDatabaseConnection()
+		{
+			String host = PropertyUtils.get(ConfigProperties.DBHOST),
+					port = PropertyUtils.get(ConfigProperties.DBPORT),
+					dbUsername = PropertyUtils.get(ConfigProperties.DBUSERNAME),
+					dbPassword = PropertyUtils.get(ConfigProperties.DBPASSWORD),
+					dbName = PropertyUtils.get(ConfigProperties.DATABASENAME);
+
+			try
+				{
+					connection = DriverManager.getConnection("jdbc:mysql://" + host + ":" + port + "/" + dbName,
+							dbUsername, dbPassword);
+					return connection;
+				} catch (SQLException e)
+				{
+					throw new DatabaseConnectivityDataFetchException(
+							"Failed to establish the connection with Database ", e);
+				}
+		}
+
+	public static void getDbData(String executableQuery)
+		{
+			connection = establishDatabaseConnection();
+
+			try
+				{
+					Statement statement = connection.createStatement();
+					ResultSet result = statement.executeQuery(executableQuery);
+					// result.next();
+
+					int columnCount = result.getMetaData().getColumnCount();
+					if (columnCount == 0)
+						throw new DatabaseConnectivityDataFetchException(
+								"Failed to establish the data from givin table ");
+
+					while (result.next())
+						{
+							System.out.println(result.getString("username"));
+						}
+
+				} catch (SQLException e)
+				{
+					throw new DatabaseConnectivityDataFetchException(
+							"Failed to establish the connection with Database ", e);
+				}
+
+		}
+
+}

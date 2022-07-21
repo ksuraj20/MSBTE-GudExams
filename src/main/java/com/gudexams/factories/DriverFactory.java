@@ -46,6 +46,10 @@ public final class DriverFactory
 					ChromeOptions cp= new ChromeOptions();
 					//cp.setExperimentalOption("useAutomation", false);
 					cp.addArguments("use-fake-ui-for-media-stream");
+					if(PropertyUtils.get(ConfigProperties.ISFULLSCREENBROWSERMODE).equalsIgnoreCase("yes"))
+						{
+							cp.addArguments("--start-fullscreen");
+						}
 					cp.addArguments("--incognito");
 					cp.addArguments("--disable-notifications");
 					cp.setCapability("marionette", true);
