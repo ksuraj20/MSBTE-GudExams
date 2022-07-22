@@ -3,6 +3,8 @@
  */
 package com.gudexams.jdbc;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -12,17 +14,21 @@ import java.util.Map;
  */
 public class DataProviderUtilsDB
 	{
-		public static void main(String[] args)
+		//private static List<Map<String, String>> list = new ArrayList<Map<String,String>>();
+		
+		public static Map<String, List<String>> dbData(List<Map<String, String>> list)
 		{
-			/*
-			DatabaseConncetionAndDataRetrive.getDbData("SELECT * FROM users");
-			
-			List<Map<String, String>> list = DatabaseConncetionAndDataRetrive.dbDataProvider();
-			
-			for (Map<String, String> l2 : list)
-				{
-					System.out.println(l2.get("password"));
-				}
-				*/
+			list = new ArrayList<Map<String,String>>();
+			Map<String, List<String>> map = new HashMap<>();
+			for (Map<String, String> m : list) {
+			  for (Map.Entry<String, String> e : m.entrySet()) {
+			    String key = e.getKey();
+			    if (map.containsKey(key)) {
+			      map.put(key, new ArrayList<String>());
+			    }
+			    map.get(key).add(e.getValue());
+			  }
+			}
+			return map;
 		}
 	}

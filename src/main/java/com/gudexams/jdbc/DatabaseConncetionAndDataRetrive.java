@@ -26,10 +26,14 @@ public class DatabaseConncetionAndDataRetrive
 	private static Connection connection;
 	private static List<Map<String, String>> list = null;
 
-	public static void main(String[] args)
-		{
-			dbDataProvider("SELECT * FROM users", "username");
-		}
+	// Use dbDataProvider methode to get data
+	public static void main(String[] args) {
+		dbDataProvider("SELECT * FROM users ORDER BY RAND()"); 
+		System.out.println("aaa "+list);	
+		Map<String, List<String>> abcd = DataProviderUtilsDB.dbData(dbDataProvider("SELECT * FROM users ORDER BY RAND()"));
+	
+		System.out.println(abcd);
+	}
 
 	private static Connection establishDatabaseConnection()
 		{
@@ -90,14 +94,10 @@ public class DatabaseConncetionAndDataRetrive
 				}
 		}
 
-	public static void dbDataProvider(String sqlQuery, String dataParameter) 
+	public static List<Map<String, String>> dbDataProvider(String sqlQuery) 
 		{
 			getDbData(sqlQuery);
-
-			for (Map<String, String> l2 : list)
-				{
-					System.out.println(l2.get(dataParameter));
-				}
+			return list;
 		}
 
 }

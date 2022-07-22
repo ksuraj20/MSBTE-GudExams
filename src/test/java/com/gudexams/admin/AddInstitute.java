@@ -25,7 +25,6 @@ public class AddInstitute extends BaseTest
 		@Test
 		public static void addInstitute(Map<String, String> data)
 		{
-			DataProviderUtils.setSheetName(FrameworkConstants.getInstituteDataSheet());
 			
 			AddInstitute_po ai = new AddInstitute_po();
 			Select ut = new Select(ai.userType());

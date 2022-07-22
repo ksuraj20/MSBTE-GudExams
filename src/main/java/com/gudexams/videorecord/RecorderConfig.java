@@ -9,6 +9,9 @@ import java.util.Date;
 
 import org.testng.annotations.BeforeSuite;
 
+import com.gudexams.enums.ConfigProperties;
+import com.gudexams.utils.PropertyUtils;
+
 import atu.testrecorder.ATUTestRecorder;
 
 /**
@@ -32,7 +35,7 @@ public final class RecorderConfig
 				try
 					{
 						recorder = new ATUTestRecorder(
-								".//atu-record-output//"+ dateFormat.format(date), true);
+								".//atu-record-output//"+ dateFormat.format(date), Boolean.parseBoolean(PropertyUtils.get(ConfigProperties.ISAUDIOENABLE)));
 					} catch (Exception e)
 					{
 						e.printStackTrace();
